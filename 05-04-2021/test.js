@@ -1,6 +1,11 @@
 const fs = require('fs');
 
-fs.writeFile('created.txt', 'Hola desde node fs', 'utf8', (error) => {})
+fs.writeFile('created.txt', 'Hola desde node fs', 'utf8', (error) => {
+    if(error){
+        console.log('Existe un error en append: ')
+        return
+    } 
+})
 
 // Por cada funcion deberiamos tener un script ejecutable
 // readFile ----
